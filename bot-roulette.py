@@ -12,7 +12,7 @@ intents = discord.Intents.default()  # or .all() if you ticked all, that is easi
 intents.members = True  # If you ticked the SERVER MEMBERS INTENT
 client = commands.Bot(command_prefix=".", intents=intents)  # "Import" the intents
 
-TOKEN = "MTAxOTMwMDUwNzgxNjMwODc5Nw.GAkR_u.rjw02UDX0Cq9OeugSPztgQKJUjO0Q5V-HLHBKI"
+TOKEN = "MTAxOTMwMDUwNzgxNjMwODc5Nw.GA3OoI.02RedRui49LYFRmeea5OBTB67IjPhzCzzv418g"
 locale.setlocale(category=locale.LC_ALL, locale='fr_FR.utf8')
 
 # liste des donjons
