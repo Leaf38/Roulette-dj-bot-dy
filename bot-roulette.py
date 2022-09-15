@@ -1,4 +1,5 @@
 import locale
+import os
 from time import strftime
 
 import discord
@@ -12,7 +13,6 @@ intents = discord.Intents.default()  # or .all() if you ticked all, that is easi
 intents.members = True  # If you ticked the SERVER MEMBERS INTENT
 client = commands.Bot(command_prefix=".", intents=intents)  # "Import" the intents
 
-TOKEN = "MTAxOTMwMDUwNzgxNjMwODc5Nw.GAkR_u.rjw02UDX0Cq9OeugSPztgQKJUjO0Q5V-HLHBKI"
 locale.setlocale(category=locale.LC_ALL, locale='fr_FR.utf8')
 
 # liste des donjons
@@ -539,4 +539,5 @@ async def on_message(message):  # this event is called when a message is sent by
 
 
 # Lance le bot
-client.run(TOKEN)
+token = os.environ['DISCORD_TOKEN']
+client.run(token)
