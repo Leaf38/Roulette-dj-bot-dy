@@ -1,4 +1,3 @@
-import locale
 import os
 from time import strftime
 
@@ -12,8 +11,6 @@ from datetime import datetime, date, timedelta
 intents = discord.Intents.default()  # or .all() if you ticked all, that is easier
 intents.members = True  # If you ticked the SERVER MEMBERS INTENT
 client = commands.Bot(command_prefix=".", intents=intents)  # "Import" the intents
-
-locale.setlocale(category=locale.LC_ALL, locale='fr_FR.utf8')
 
 # liste des donjons
 listDonjons = [
@@ -361,11 +358,10 @@ async def sendRandomDj(listArg):
         imgUrl = data["imgUrl"]
 
     dateNbDay = date.today() + timedelta(nbDay)
-    nameDay = dateNbDay.strftime("%A")
     dateNbDay = dateNbDay.strftime("%d/%m/%Y")
 
     await channelBot.send(
-        '@everyone Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(nameDay) + " " + str(
+        '@everyone Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(
             dateNbDay) + ' à ' + nbHours + 'h\nLe donjon choisi **aléatoirement** est : ' + choixDonjon + ' :arrow_down:')
     messageBot = await channelBot.send(imgUrl)
     emoji = '\N{THUMBS UP SIGN}'
@@ -418,9 +414,8 @@ async def sendDonjon(lastMsgSend, idName):
         imgUrl = data["imgUrl"]
 
     dateNbDay = date.today() + timedelta(nbDay)
-    nameDay = dateNbDay.strftime("%A")
     dateNbDay = dateNbDay.strftime("%d/%m/%Y")
-    await channel.send('Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(nameDay) + " " + str(
+    await channel.send('Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(
         dateNbDay) + ' à ' + nbHours + 'h\nLe donjon choisi par ' + str(
         user) + ' est : ' + choixDonjon + ' :arrow_down:')
     messageBot = await channel.send(imgUrl)
