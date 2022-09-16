@@ -1,2 +1,2 @@
 web: python bot-roulette.py
-worker: python script.py
+worker: python bot-roulette.py
