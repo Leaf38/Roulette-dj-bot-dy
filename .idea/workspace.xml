@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8899c360-ed8f-4b53-a21f-bacea24b29c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot-roulette.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot-roulette.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

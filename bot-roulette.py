@@ -375,13 +375,13 @@ async def randomDj(lastMsgSend):
         user = lastMsgSend.author
         if (str(user) != "Solticia#6985" and str(user) != "Milimilix#7983"):
             print("commande random lancer par " + str(user) + " qui n'est pas dans la whitelist")
-            await channelSend.send("Vous n'êtes pas autorisé à lancer cette commande")
+            await channelSend.send("Tu n'es pas autorisé à lancer cette commande")
             return
         listArg = lastMsgSendContent.split()
         if (checkGoodFormatRandom(listArg)):
             await sendRandomDj(listArg)
         else:
-            await channelSend.send("Essaies en tapant : %randomdj <level(1-5)> <dans combien de jour> <à quelle heure>")
+            await channelSend.send("Essaies en tapant : ```%randomdj <level(1-5)> <dans combien de jour> <à quelle heure>```")
     else:
         return
 
@@ -431,7 +431,7 @@ async def donjon(lastMsgSend):
         if (checkGoodFormat(listArg) != False):
             await sendDonjon(lastMsgSend, checkGoodFormat(listArg))
         else:
-            await channelSend.send("Essaies en tapant : %donjon <nom du boss> <dans combien de jour> <à quelle heure>")
+            await channelSend.send("Essaies en tapant : ```%donjon <nom du boss> <dans combien de jour> <à quelle heure>```")
     else:
         return
 
@@ -445,9 +445,9 @@ async def createRandomGrp(messageBot, nbUser):
         return
     usersReact = set()
     for x in users:
-        usersReact.add(x.name)
-    usersReact.remove('Roulette des donjons')
-    await channelBot.send(((f"Les Participants: " + str(usersReact)).replace("{", "")).replace("}", ""))
+        if "Roulette des donjons" not in x.name:
+            usersReact.add("<@"+str(x.id)+">")
+    await messageBot.channel.send(((f"Les Participants: " + str(usersReact)).replace("{", "")).replace("}", "").replace("'", ""))
 
     nbOfGrp = 1
     # keys name, value group
@@ -471,8 +471,8 @@ async def createRandomGrp(messageBot, nbUser):
     i = 1
     while i <= nbOfGrp:
         thisGrp = [k for k, v in groupes.items() if v == i]
-        jolimsgGrp = ((f"Groupe: " + str(i) + " " + str(thisGrp)).replace("[", "")).replace("]", "")
-        await channelBot.send(jolimsgGrp)
+        jolimsgGrp = ((f"Groupe " + str(i) + " : " + str(thisGrp)).replace("[", "")).replace("]", "").replace("'", "")
+        await messageBot.channel.send(jolimsgGrp)
         i += 1
 
 
@@ -481,33 +481,33 @@ async def groupe(lastMsgSend):
     if ("%groupe" in lastMsgSendContent and lastMsgSendContent.startswith('%')):
         channelSend = lastMsgSend.channel
         user = lastMsgSend.author
-        if (str(user) != "Solticia#6985" and str(user) != "Milimilix#7983"):
-            print("commande random lancer par " + str(user) + " qui n'est pas dans la whitelist")
-            await channelSend.send("Vous n'êtes pas autorisé à lancer cette commande")
-            return
         listArg = lastMsgSendContent.split()
         if (checkGoodFormatGrp(listArg) != False):
             nbUserInGrp = checkGoodFormatGrp(listArg)
         else:
             await channelSend.send(
-                "Essaies en tapant : %groupe <nombre joueur par groupe>")
+                "Essaies en tapant : ```%groupe <nombre joueur par groupe>```")
     else:
         return
 
-    messageBot = await channelBot.fetch_message(channelBot.last_message_id)
+    messageBot = await channelSend.fetch_message(channelSend.last_message_id)
+
     if 'https://' in messageBot.content:
         await createRandomGrp(messageBot, nbUserInGrp)
     else:
         messages = set()
-        async for message in channelBot.history(limit=100):
+        async for message in channelSend.history(limit=100):
             # do something with all messages
             messages.add(message)
         latestMsgContentImg = set()
         for msg in messages:
-            if "https://" in str(msg.content):
+            if ("https://" in str(msg.content) and str(msg.author) == "Roulette des donjons#7941"):
                 latestMsgContentImg = msg
-        await createRandomGrp(latestMsgContentImg, nbUserInGrp)
-
+        if latestMsgContentImg is None:
+            await channelSend.send("Aucun donjon n'a été lancé dans ce channel")
+            return
+        else:
+            await createRandomGrp(latestMsgContentImg, nbUserInGrp)
 
 async def usage_help(lastMsgSend):
     lastMsgSendContent = lastMsgSend.content
@@ -529,10 +529,10 @@ async def on_message(message):  # this event is called when a message is sent by
     # Set command random donjon with level and date (ex : %randomdj 4 14/09/2022
     await randomDj(lastMsgSend)
     await donjon(lastMsgSend)
-    # await groupe(lastMsgSend)
+    await groupe(lastMsgSend)
     await usage_help(lastMsgSend)
 
 
 # Lance le bot
 token = os.environ['DISCORD_TOKEN']
-client.run(token)
+#client.run(token)
