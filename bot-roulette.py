@@ -1,16 +1,21 @@
 import os
-from time import strftime
+from time import strftime, timezone
 
 import discord
 import validators
+from discord import guild
 from discord.ext import commands
 import requests
 import random
 from datetime import datetime, date, timedelta
+import locale
+from discord.utils import get
 
 intents = discord.Intents.default()  # or .all() if you ticked all, that is easier
 intents.members = True  # If you ticked the SERVER MEMBERS INTENT
 client = commands.Bot(command_prefix=".", intents=intents)  # "Import" the intents
+
+locale.setlocale(category=locale.LC_ALL, locale='fr_FR.utf8')
 
 # liste des donjons
 listDonjons = [
@@ -137,8 +142,11 @@ listDonjons = [
     ["https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj19-amirukam-sommaire_orig.jpg", "5",
      "Reine Amirukam"],
     ["http://image.noelshack.com/fichiers/2022/36/7/1662902767-kabahal.png", "5", "Kabahal"],
-    # "xxx": "5", #4 Cavaliers
-    # "xxx": "5", #Eternel Conflit
+    ["https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/cavaliers-eliocalypse-sommaire_orig.jpg", "5",
+     "4 cavaliers"],  # 4 Cavaliers
+    [
+        "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/custom_themes/586567114324766674/files/card/dj-eternel-conflit.png",
+        "5", "Eternel Conflit"]  # Eternel Conflit
 ]
 donjonsDict = {
     "4051": "1",  # Kardorim
@@ -257,12 +265,13 @@ donjonsDict = {
     # Roi imagami
     "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj19-amirukam-sommaire_orig.jpg": "5",  # Reine Amirukam
     "http://image.noelshack.com/fichiers/2022/36/7/1662902767-kabahal.png": "5",  # Kabahal
-    # "xxx": "5", #4 Cavaliers
-    # "xxx": "5", #Eternel Conflit
+    "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/cavaliers-eliocalypse-sommaire_orig.jpg": "5",
+    # 4 Cavaliers
+    "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/custom_themes/586567114324766674/files/card/dj-eternel-conflit.png": "5",
+    # Eternel Conflit
 }
 
 global messageBot
-
 
 def checkGoodFormatGrp(listArg):
     nbUserInGrp = int(listArg[1])
@@ -271,6 +280,7 @@ def checkGoodFormatGrp(listArg):
         return nbUserInGrp
     else:
         return False
+
 
 def checkGoodFormatRandom(listArg):
     boolFormat = False
@@ -282,19 +292,12 @@ def checkGoodFormatRandom(listArg):
         nbDay = int(listArg[2])
     else:
         return False
-    if (listArg[3].isdigit()):
-        nbHours = int(listArg[3])
-    else:
-        return False
     if (level > 0 and level <= 5):
         boolFormat = True
     else:
         return False
-    if (nbHours > 0 and nbHours <= 24):
-        boolFormat = True
-    else:
-        return False
     return boolFormat
+
 
 def checkGoodFormat(listArg):
     argument = 1
@@ -322,15 +325,7 @@ def checkGoodFormat(listArg):
         argument += 1
     else:
         return False
-    if (listArg[argument].isdigit()):
-        nbHours = int(listArg[argument])
-    else:
-        return False
     if (boolname):
-        boolFormat = True
-    else:
-        return False
-    if (nbHours > 0 and nbHours <= 24):
         boolFormat = True
     else:
         return False
@@ -358,11 +353,12 @@ async def sendRandomDj(listArg):
         imgUrl = data["imgUrl"]
 
     dateNbDay = date.today() + timedelta(nbDay)
+    nameDay = dateNbDay.strftime("%A")
     dateNbDay = dateNbDay.strftime("%d/%m/%Y")
 
     await channelBot.send(
-        '@everyone Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(
-            dateNbDay) + ' à ' + nbHours + 'h\nLe donjon choisi **aléatoirement** est : ' + choixDonjon + ' :arrow_down:')
+        '@here Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(nameDay) + " " + str(
+            dateNbDay) + ' à ' + nbHours + '\nLe donjon choisi **aléatoirement** est : ' + choixDonjon + ' :arrow_down:')
     messageBot = await channelBot.send(imgUrl)
     emoji = '\N{THUMBS UP SIGN}'
     await messageBot.add_reaction(emoji)
@@ -372,16 +368,13 @@ async def randomDj(lastMsgSend):
     lastMsgSendContent = lastMsgSend.content
     if ("%randomdj" in lastMsgSendContent and lastMsgSendContent.startswith('%')):
         channelSend = lastMsgSend.channel
-        user = lastMsgSend.author
-        if (str(user) != "Solticia#6985" and str(user) != "Milimilix#7983"):
-            print("commande random lancer par " + str(user) + " qui n'est pas dans la whitelist")
-            await channelSend.send("Tu n'es pas autorisé à lancer cette commande")
-            return
+
         listArg = lastMsgSendContent.split()
         if (checkGoodFormatRandom(listArg)):
             await sendRandomDj(listArg)
         else:
-            await channelSend.send("Essaies en tapant : ```%randomdj <level(1-5)> <dans combien de jour> <à quelle heure>```")
+            await channelSend.send(
+                "Essaies en tapant : ```%randomdj <level(1-5)> <dans combien de jour> <à quelle heure>```")
     else:
         return
 
@@ -398,7 +391,7 @@ async def sendDonjon(lastMsgSend, idName):
     user = lastMsgSend.author.name
     channel = lastMsgSend.channel
     nbDay = int(listArg[argument])
-    argument+=1
+    argument += 1
     nbHours = listArg[argument]
 
     valid = validators.url(idName)
@@ -414,8 +407,10 @@ async def sendDonjon(lastMsgSend, idName):
         imgUrl = data["imgUrl"]
 
     dateNbDay = date.today() + timedelta(nbDay)
+    nameDay = dateNbDay.strftime("%A")
     dateNbDay = dateNbDay.strftime("%d/%m/%Y")
-    await channel.send('Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(
+
+    await channel.send('Reagi par :thumbsup: si tu souhaites y participer pour le ' + str(nameDay) + " " + str(
         dateNbDay) + ' à ' + nbHours + 'h\nLe donjon choisi par ' + str(
         user) + ' est : ' + choixDonjon + ' :arrow_down:')
     messageBot = await channel.send(imgUrl)
@@ -431,7 +426,8 @@ async def donjon(lastMsgSend):
         if (checkGoodFormat(listArg) != False):
             await sendDonjon(lastMsgSend, checkGoodFormat(listArg))
         else:
-            await channelSend.send("Essaies en tapant : ```%donjon <nom du boss> <dans combien de jour> <à quelle heure>```")
+            await channelSend.send(
+                "Essaies en tapant : ```%donjon <nom du boss> <dans combien de jour> <à quelle heure>```")
     else:
         return
 
@@ -446,8 +442,9 @@ async def createRandomGrp(messageBot, nbUser):
     usersReact = set()
     for x in users:
         if "Roulette des donjons" not in x.name:
-            usersReact.add("<@"+str(x.id)+">")
-    await messageBot.channel.send(((f"Les Participants: " + str(usersReact)).replace("{", "")).replace("}", "").replace("'", ""))
+            usersReact.add("<@" + str(x.id) + ">")
+    await messageBot.channel.send(
+        ((f"Les Participants: " + str(usersReact)).replace("{", "")).replace("}", "").replace("'", ""))
 
     nbOfGrp = 1
     # keys name, value group
@@ -496,13 +493,21 @@ async def groupe(lastMsgSend):
         await createRandomGrp(messageBot, nbUserInGrp)
     else:
         messages = set()
-        async for message in channelSend.history(limit=100):
+        async for message in channelSend.history(limit=200, oldest_first=True):
             # do something with all messages
             messages.add(message)
+        messages = list(messages)
+
         latestMsgContentImg = set()
+        latestMsgCreatedAt = set()
+
         for msg in messages:
             if ("https://" in str(msg.content) and str(msg.author) == "Roulette des donjons#7941"):
-                latestMsgContentImg = msg
+                if type(latestMsgCreatedAt) == set:
+                    latestMsgCreatedAt = msg.created_at - timedelta(days=1)
+                if latestMsgCreatedAt < msg.created_at:
+                    latestMsgContentImg = msg
+                    latestMsgCreatedAt = latestMsgContentImg.created_at
         if latestMsgContentImg is None:
             await channelSend.send("Aucun donjon n'a été lancé dans ce channel")
             return
@@ -516,11 +521,30 @@ async def usage_help(lastMsgSend):
         await channelSend.send(
             "```%randomdj <level(1-5)(1facile-5difficile)> <dans combien de jour> <à quelle heure>```:arrow_right: Envoi un donjon de manière aléatoire (autorisation requise)\n```%donjon <nom du boss> <dans combien de jour> <à quelle heure>```:arrow_right: Envoi un donjon\n```%groupe <nombre de joueurs par groupe>```:arrow_right: Créer des groupes aléatoires depuis la liste des participants (réactions à un donjon par :thumbsup:)")
 
+async def maj_access_cagnotte(lastMsgSend):
+    channelSend = client.get_channel(1051098171029332038)
+    member = lastMsgSend.author
+    role_donateur = get(member.guild.roles, name="Donateur Potentiel")
+    role_confirme = get(member.guild.roles, name="Membre confirmé")
+    role_leader = get(member.guild.roles, name="Leader")
+    for guild in client.guilds:
+        for member in guild.members:
+            if lastMsgSend.created_at - timedelta(60) > member.joined_at:
+                if role_confirme in member.roles or role_leader in member.roles:
+                    if role_donateur not in member.roles:
+                        await member.add_roles(role_donateur)
+                        await channelSend.send("Ajout du rôle Donateur Potentiel pour " + str(member))
+            if role_donateur in member.roles:
+                if role_confirme not in member.roles:
+                    if role_leader not in member.roles:
+                        await member.remove_roles(role_donateur)
+                        await channelSend.send("Suppression du rôle Donateur Potentiel pour " + str(member))
 
+#MAIN
 @client.event
 async def on_message(message):  # this event is called when a message is sent by anyone
     global channelBot
-    channelBot = client.get_channel(1018522610218319923)
+    channelBot = client.get_channel(1051098638341914764)
     user = message.author
     if user == client.user:
         return
@@ -531,8 +555,10 @@ async def on_message(message):  # this event is called when a message is sent by
     await donjon(lastMsgSend)
     await groupe(lastMsgSend)
     await usage_help(lastMsgSend)
+    await maj_access_cagnotte(lastMsgSend)
 
 
 # Lance le bot
-token = os.environ['DISCORD_TOKEN']
-#client.run(token)
+token = "MTAxOTMwMDUwNzgxNjMwODc5Nw.GQ9MhJ.tMGGLZmQV8SGMjfbV2DFkrd-jKvNlQeKudVqks"
+# token = os.environ['DISCORD_TOKEN']
+client.run(token)
