@@ -20,42 +20,42 @@ locale.setlocale(category=locale.LC_ALL, locale='fr_FR.utf8')
 # liste des donjons
 listDonjons = [
     ["https://i.ytimg.com/vi/SOMdH1dWt4o/hqdefault.jpg", "1", "Kardorim"],
-    ["https://dofusretro.org/template/img/core/monsters/1459.svg", "1", "Tournesol Affamé"],
-    ["https://dofusretro.org/template/img/core/monsters/1546.svg", "1", "Mob l'Éponge"],
+    ["https://lh3.googleusercontent.com/4AWeBSifWK9gt_nFT7BoV5yYtBRyW8-TKcSJy9xk_A7aSeH_7Ofbct5EaXU5M0flMCD6l5pOjKymu716zrcwj1LFNkQbI884CriQUnP8CQ", "1", "Tournesol Affamé"],
+    ["https://lh3.googleusercontent.com/c0Zh3gQj6Lb8slyEgO-4pDq8pkboRetvmkiL0LPqjbf1xyqX_KnNmed3SZi3Y-KUYZvMDAMoSjYqmBIzre5OBDMiKL1A23bExJYxkvS_fA", "1", "Mob l'Éponge"],
     ["https://jolstatic.fr/upload/dofus/Bouftous/bouftouroyal.png", "1", "Bouftou Royal"],
     ["https://static1.millenium.org/articles/1/30/60/31/@/621523-3945-article_m-1.png", "1", "Kankreblath"],
     ["https://jolstatic.fr/dofus/equipe/472077/articles/maisonFantome/boostache.jpg", "1", "Boostache"],
     ["https://static.wikia.nocookie.net/bestiaire-dofus/images/b/bd/Scaraboss_dor%C3%A9.jpg/revision/latest/scale-to-width-down/200?cb=20110502094859&path-prefix=fr", "1", "Scarabosse Doré"],
-    ["https://solomonk.fr/img/monsters/artworks/1380.svg", "1", "Batofu"],
+    ["https://ekladata.com/GhxCOWfkvaoogthxFEKCGRyVVx8.jpg", "1", "Batofu"],
     ["https://jolstatic.fr/attachments/0/4/734/4/ZmYxNWM0Nzc4OGJmMTA5NzM4NjczZDRlMmYzMGI5YmU/chafer11.png", "1", "Chafer Rönin"],
     ["https://doflex.fr/s/npcs/png/ba710cdcde62e2cbab2e54e06a3a7456.png", "1", "Grunob"],
-    ["https://dofusretro.org/template/img/core/monsters/1241.svg", "1", "Bworkette"],
-    ["https://solomonk.fr/img/monsters/artworks/1083.svg", "1", "Coffre des Forgerons"],
+    ["https://lh3.googleusercontent.com/Yt0c4LmBy8lVaAc0YT_8Cya3lVf-Erh1mWmlLmJWmNtexzccKuhW2MiWmt2ASjYVir1Nhn94ZChcAtjbPLDeIfYQAgHQGsJqa-d0Un-n", "1", "Bworkette"],
+    ["https://lh3.googleusercontent.com/M8HTuBhpzVL8MY3GvdDs3EqMLRmKcjfZhnZ8TuSM2k9FmO8EDRf-f5_PcJRJkoH4LEbEOSt__LRvZdQzf7uYg_VOy9RA0HUqNqqYJZWh", "1", "Coffre des Forgerons"],
     ["https://guidedofus.com/wp-content/uploads/2019/11/shin-larve.png", "1", "Shin Larve"],
-    ["https://dofusretro.org/template/img/core/monsters/1617.svg", "1", "Corailleur Magistral"],
+    ["https://lh3.googleusercontent.com/hx8qudgPeJx7r41J-BS-OQNB5icRoAocC5cVp-z0bg-SMkv7cI9QUnY-9oZAi2tl-5Ed0FarPYrfkCYtoXD-D8n4i1mMhzp_-dI7KSTLPA", "1", "Corailleur Magistral"],
     ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4xiiX9v6G2nAcB7oimc70u_DxFTJs1f9zMA&usqp=CAU", "1", "Kwakwa"],
     ["https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj42-rakoopeur-sommaire_orig.jpg", "1", "Rakoopeur"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/a/a2/Wey_Wabbit.png/revision/latest?cb=20150210142231&path-prefix=fr", "2", "Wa wabbit"],
     ["https://lh3.googleusercontent.com/bu_Bhj2fFzmIXtUM9UYr97nElfG35glegASXngtK0Hmn2-w8zLxCQ3YA6_4ZV8nncCkTDtwNJ3_0qYIoEx5OLhdU_QyDuHM0wbTiRn01iA", "2", "Kanniboul Ebil"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/f/f5/Nelween.jpg/revision/latest?cb=20150515093119&path-prefix=fr", "2", "Nelween"],
-    ["https://solomonk.fr/img/monsters/artworks/1621.svg", "2", "Gourlo le Terrible"],
-    ["https://dofusretro.org/template/img/core/monsters/1358.svg", "2", "Craqueleur Légendaire"],
+    ["https://lh3.googleusercontent.com/xLpH0PzgWFmCihf52dpiP5CsLx1Dq3ZerFpg42RrFYarwVBZrT-WwQmSC2NLfyxd-n8oEFRH4sypOgBJwPWb710Mh2bJiKisAWff7_93_g", "2", "Gourlo le Terrible"],
+    ["https://lh3.googleusercontent.com/Pf62RE_1Tc79BZT5LfZlybdkGrXl1XPA8WXODS9GcSJyOBmvhPBbOYWurmuudJknZW__-Z_mJOPpII0gcPjXzopdu0oeKZ7YcOZrtfhV", "2", "Craqueleur Légendaire"],
     ["https://static.wikia.nocookie.net/krosmoz/images/0/08/Draegnerys.png/revision/latest?cb=20210422191245&path-prefix=fr", "2", "Draegnerys"],
     ["https://lh3.googleusercontent.com/_lwfMvZQpJq1Q7YllE2Yg4JpqwdnCj9THoz4D_cbDRC1j_j1Ad9g_4y0SmvHqENmyq-wTvyV1iQfigG6jKeV-89ViaUQP-oNuQmkmw44Tg", "2", "Wa wobot"],
     ["https://static.wikia.nocookie.net/krosmoz/images/6/62/Mantiscore.png/revision/latest?cb=20210422203436&path-prefix=fr", "2", "Mantiscore"],
     ["https://static.wikia.nocookie.net/krosmoz/images/7/73/Reine_Ny%C3%A9e.jpg/revision/latest?cb=20210422211822&path-prefix=fr", "2", "Reine Nyée"],
-    ["https://solomonk.fr/img/monsters/artworks/1458.svg", "2", "Abraknyde Ancestral"],
+    ["https://lh3.googleusercontent.com/PkaN9b6mdHCGOzZkOn4o4aQTRouTGOuQ5kx-JYtyZwUjFtECYLfe4glzwyC-bErwOpAxaAiqy0PH15oq7N6Qdpv4llM7wf1OuqsonOOGBQ", "2", "Abraknyde Ancestral"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/9/9b/Chouque.png/revision/latest?cb=20150902084023&path-prefix=fr", "2", "le Chouque"],
     ["https://jolstatic.fr/dofus/equipe/548763/donjons/MagikRiktus/Choudini.png", "2", "Choudini"],
-    ["https://dofusretro.org/template/img/core/monsters/1037.svg", "3", "Dragon Cochon"],
-    ["https://solomonk.fr/img/monsters/artworks/1356.svg", "3", "Koulosse"],
-    ["https://dofusretro.org/template/img/core/monsters/1134.svg", "3", "Meulou"],
+    ["https://lh3.googleusercontent.com/hnz40FsMXCSnYLLU-ohNl8wznKgYp6WtP5ic1E4XcPQqSSGWaz5sjZ75vs2e2ml19M_dc7Q59Pid43VWAWwgwJ-4N1XDc70W5uGbnBI", "3", "Dragon Cochon"],
+    ["https://lh3.googleusercontent.com/NYQE_d9mHOR49mX20HIrUSI4_aDnSSwusgu1CEZ1z9xpLt-GlqGxlSFLMfBP9xvIqBNZfkdUcUnT3jexTZIK1EZuliRfIxpH6u6iU8TX", "3", "Koulosse"],
+    ["https://methodwakfu.com/wp-content/uploads/2019/11/Milkar_Image-1.png", "3", "Meulou"],
     ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNWh-RIpkyet6dOTHGCCYmcF82A6NfMqVcA&usqp=CAU", "3", "Moon"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/e/e6/Dramak.png/revision/latest/scale-to-width-down/216?cb=20150120072036&path-prefix=fr", "3", "Maitre des Pantins"],
     ["https://jolstatic.fr/dofus/equipe/472077/articles/enutrosor/mallefisk/Monstres/mimikado.jpg", "3", "Malléfisk"],
     ["https://static.wikia.nocookie.net/krosmoz/images/f/fb/Kharnozor.png/revision/latest?cb=20210422201358&path-prefix=fr", "3", "Kharnozor"],
-    ["https://solomonk.fr/img/monsters/artworks/1585.svg", "3", "Silf le Rasboul Majeur"],
-    ["https://solomonk.fr/img/monsters/artworks/1186.svg", "3", "Maitre Corbac"],
+    ["https://lh3.googleusercontent.com/TZ_P2KyJ-2_bb-bK_T-G0vhG5nqPpe1AyttALW3TaFwtOPvei1lcJtgaiTN9bUrWXZZXyjoZo90UDAQt82HLlLiE1-Gg8gCWnNvba-oT", "3", "Silf le Rasboul Majeur"],
+    ["https://lh3.googleusercontent.com/MEbuepNxF7zKecL_cFDthGeDjrqzoBiPH5LspipFilIzWjUKWjNZ699GiOt-0fKyWuwdhQ1KNibJza-cX7H0WQa9mhNlMuOafbjRuxLV", "3", "Maitre Corbac"],
     ["https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj21-rat-blanc-sommaire_orig.jpg", "3", "Rat Blanc"],
     ["939", "3", "Rat Noir"],
     ["https://lh3.googleusercontent.com/JptzmIPPG3ANJXCfrQXN79ngTDdzUIJcFBQc89h2X_FGdZFAYGQ5EA_N1T4buAxuh1AfVGRY2d9S2az9q_0lZRNy8V-LE5z2d7QZK3k", "3", "Pounicheur"],
@@ -65,9 +65,9 @@ listDonjons = [
     ["https://static.wikia.nocookie.net/dofus-rp/images/f/f9/BlopMR.png/revision/latest/scale-to-width-down/274?cb=20230224094657&path-prefix=fr", "3", "Blop Multicolore Royal"],
     ["https://lh3.googleusercontent.com/4nI6PlsVo7r-N3Us534HJsQzP9GLgJYoycXXQ6liv8imNh7Nu0p_2nwdyFE5EktOFiV3kvCSCPfcA_jP0I6Ur9g2pqw9NHCbb68cmsmmPA", "3", "Minotoror"],
     ["https://staticns.ankama.com/comm/news/dofus/www/03_2013/carrousel-relance-frigost.jpg", "3", "Royalmouth"],
-    ["https://solomonk.fr/img/monsters/artworks/1151.svg", "3", "Tofu Royal"],
+    ["https://lh3.googleusercontent.com/sUrTP3k6q2Q9BkYan-XuT19b_oOlo0sgOe4mK766gi_1wemuxTmt2yuidsv4iyB3zzI2FJIltM_x72Anj9NIxL_OHxpvj2jsfJwGwPK7", "3", "Tofu Royal"],
     ["https://static.wikia.nocookie.net/dofus-wakfu/images/a/af/126.png/revision/latest?cb=20171126173825&path-prefix=fr", "3", "Crocabulia"],
-    ["https://solomonk.fr/img/monsters/artworks/1450.svg", "3", "Skeunk"],
+    ["https://lh3.googleusercontent.com/rrOO2c_Po2S81OpblqubI-r6_kq8eaY-DhOTY-mxn3wGOn5PoYDrbatT7U31llpWw_YxUSSHT4fZO8snq7JagFHREBTMqnxnV7HNh40uvg", "3", "Skeunk"],
     ["https://lh3.googleusercontent.com/p9hDS68a3pyF216gHIlfGXGEyLWCK52TdH3WlRtBo8jxLXUu_bJrtfDGKI4oChZFZewEEICXojjgOVgJNB6shaE7khbgWCds4oMqUx6vjw", "3", "Fraktale"],
     ["https://lh3.googleusercontent.com/vD1CrELpHcoaW3hVGKtD5JoIlBhMwHy1xj4f1YMMgCth9cuEHPAUnPxVsavC4hTFA8SxHiH4POdA0uvAMm8p_nGzMI2LdjiORhUnOHc", "3", "Haute Truche"],
     ["https://static.wikia.nocookie.net/krosmoz/images/c/c2/El_Piko.jpg/revision/latest?cb=20210422191746&path-prefix=fr", "3", "El Piko"],
@@ -79,7 +79,7 @@ listDonjons = [
         "https://static.wikia.nocookie.net/krosmoz/images/1/16/Tanukou%C3%AF_San.png/revision/latest?cb=20210422214342&path-prefix=fr",
         "3", "Tanukoui San"],
     ["https://lh3.googleusercontent.com/rpKYNQ_kny-y0MgEbgyy7pvYeZ7KPPFw_EBw6CnvrbJX5kq-D_7BF2xOOPpdEhDQ8tInRaTHMzD8x7KWuEVGMILeseqKfA3WBVDPKh8", "3", "Chêne Mou"],
-    ["https://solomonk.fr/img/monsters/artworks/1616.svg", "3", "Tynril"],
+    ["https://lh3.googleusercontent.com/1wa8YqAfIUwSxlra7GJhjrj5gDt7LzV8Jdr8nThkaln8r-49ZMwd_IEbE2awnazUec0Whi1UgaOaxyTfP8DQpLWhZRMxHtWgj-G0f7FV", "3", "Tynril"],
     ["https://lh3.googleusercontent.com/BF8ZdcAY88qo76osVtB3rxXtKNjLW_gGlNe61H_ktdysQ6FqVDVsoeZVLoTTiCnYWaguiOmAxSiHuI3O6k5lwQTYKiRb_H59vwJwr_k9", "3", "Mansot Royal"],
     ["https://pbs.twimg.com/media/EqkmPb_W4AEjN-F?format=jpg&name=large", "3", "Hanshi et Shihan"],
     ["https://www.dofus.com/fr/mmorpg/encyclopedie/monstres/6249-founoroshi", "3", "Founoroshi"],
@@ -88,7 +88,7 @@ listDonjons = [
     ["https://cdna.artstation.com/p/assets/images/images/019/912/544/large/yohan-baes-phossile.jpg?1565554176", "3", "Phossile"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/5/58/HellMina.png/revision/latest?cb=20220524080032&path-prefix=fr", "3", "Hell mina"],
     ["https://jolstatic.fr/dofus/equipe/548763/donjons/Kimbo/kimbo.png", "4", "Kimbo"],
-    ["https://dofusretro.org/template/img/core/monsters/1444.svg", "4", "Minotot"],
+    ["https://lh3.googleusercontent.com/ea3y5wRdEN1xz1HQcJ6tsA6GYEfCxFRbZAGsQddu3A01WokCICOz3lFu9-WIp627XSmpN3CSYUITlaqWdKtquI3_qVz8k4R2LRRZY40Z4A", "4", "Minotot"],
     ["https://static1.millenium.org/articles/5/14/25/75/@/44115-dofus-2018-11-23-23-02-14-hackh-article_image_t-2.png", "4", "Obsidiantre"],
     ["https://static.wikia.nocookie.net/dofus-rp/images/7/74/Kanigroula2.jpg/revision/latest?cb=20230327085619&path-prefix=fr", "4", "Kanigroula"],
     ["https://static.wikia.nocookie.net/krosmoz/images/f/f4/Ush_Galesh_2.jpg/revision/latest?cb=20210422215414&path-prefix=fr", "4", "Ush Galesh"],
@@ -153,42 +153,42 @@ listDonjons = [
 ]
 donjonsDict = {
     "https://i.ytimg.com/vi/SOMdH1dWt4o/hqdefault.jpg": "1",  # Kardorim
-    "https://dofusretro.org/template/img/core/monsters/1459.svg": "1",  # Tournesol Affamé
-    "https://dofusretro.org/template/img/core/monsters/1546.svg": "1",  # Mob l'Éponge
+    "https://lh3.googleusercontent.com/4AWeBSifWK9gt_nFT7BoV5yYtBRyW8-TKcSJy9xk_A7aSeH_7Ofbct5EaXU5M0flMCD6l5pOjKymu716zrcwj1LFNkQbI884CriQUnP8CQ": "1",  # Tournesol Affamé
+    "https://lh3.googleusercontent.com/c0Zh3gQj6Lb8slyEgO-4pDq8pkboRetvmkiL0LPqjbf1xyqX_KnNmed3SZi3Y-KUYZvMDAMoSjYqmBIzre5OBDMiKL1A23bExJYxkvS_fA": "1",  # Mob l'Éponge
     "https://jolstatic.fr/upload/dofus/Bouftous/bouftouroyal.png": "1",  # Bouftou Royal
     "https://static1.millenium.org/articles/1/30/60/31/@/621523-3945-article_m-1.png": "1",  # Kankreblath
     "https://jolstatic.fr/dofus/equipe/472077/articles/maisonFantome/boostache.jpg": "1",  # Boostache
     "https://static.wikia.nocookie.net/bestiaire-dofus/images/b/bd/Scaraboss_dor%C3%A9.jpg/revision/latest/scale-to-width-down/200?cb=20110502094859&path-prefix=fr": "1",  # Scarabosse Doré
-    "https://solomonk.fr/img/monsters/artworks/1380.svg": "1",  # Batofu
+    "https://ekladata.com/GhxCOWfkvaoogthxFEKCGRyVVx8.jpg": "1",  # Batofu
     "https://jolstatic.fr/attachments/0/4/734/4/ZmYxNWM0Nzc4OGJmMTA5NzM4NjczZDRlMmYzMGI5YmU/chafer11.png": "1",  # Chafer Rönin
     "https://doflex.fr/s/npcs/png/ba710cdcde62e2cbab2e54e06a3a7456.png": "1",  # Grunob
-    "https://dofusretro.org/template/img/core/monsters/1241.svg": "1",  # Bworkette
-    "https://solomonk.fr/img/monsters/artworks/1083.svg": "1",  # Coffre des Forgerons
+    "https://lh3.googleusercontent.com/Yt0c4LmBy8lVaAc0YT_8Cya3lVf-Erh1mWmlLmJWmNtexzccKuhW2MiWmt2ASjYVir1Nhn94ZChcAtjbPLDeIfYQAgHQGsJqa-d0Un-n": "1",  # Bworkette
+    "https://lh3.googleusercontent.com/M8HTuBhpzVL8MY3GvdDs3EqMLRmKcjfZhnZ8TuSM2k9FmO8EDRf-f5_PcJRJkoH4LEbEOSt__LRvZdQzf7uYg_VOy9RA0HUqNqqYJZWh": "1",  # Coffre des Forgerons
     "https://guidedofus.com/wp-content/uploads/2019/11/shin-larve.png": "1",  # Shin Larve
-    "https://dofusretro.org/template/img/core/monsters/1617.svg": "1",  # Corailleur Magistral
+    "https://lh3.googleusercontent.com/hx8qudgPeJx7r41J-BS-OQNB5icRoAocC5cVp-z0bg-SMkv7cI9QUnY-9oZAi2tl-5Ed0FarPYrfkCYtoXD-D8n4i1mMhzp_-dI7KSTLPA": "1",  # Corailleur Magistral
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4xiiX9v6G2nAcB7oimc70u_DxFTJs1f9zMA&usqp=CAU": "1",  # Kwakwa
     "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj42-rakoopeur-sommaire_orig.jpg": "1", #Rakoopeur
     "https://static.wikia.nocookie.net/dofus-rp/images/a/a2/Wey_Wabbit.png/revision/latest?cb=20150210142231&path-prefix=fr": "2",  # Wa wabbit
     "https://lh3.googleusercontent.com/bu_Bhj2fFzmIXtUM9UYr97nElfG35glegASXngtK0Hmn2-w8zLxCQ3YA6_4ZV8nncCkTDtwNJ3_0qYIoEx5OLhdU_QyDuHM0wbTiRn01iA": "2",  # Kanniboul Ebil
     "https://static.wikia.nocookie.net/dofus-rp/images/f/f5/Nelween.jpg/revision/latest?cb=20150515093119&path-prefix=fr": "2",  # Nelween
-    "https://solomonk.fr/img/monsters/artworks/1621.svg": "2",  # Gourlo le Terrible
-    "https://dofusretro.org/template/img/core/monsters/1358.svg": "2",  # Craqueleur Légendaire
+    "https://lh3.googleusercontent.com/xLpH0PzgWFmCihf52dpiP5CsLx1Dq3ZerFpg42RrFYarwVBZrT-WwQmSC2NLfyxd-n8oEFRH4sypOgBJwPWb710Mh2bJiKisAWff7_93_g": "2",  # Gourlo le Terrible
+    "https://lh3.googleusercontent.com/Pf62RE_1Tc79BZT5LfZlybdkGrXl1XPA8WXODS9GcSJyOBmvhPBbOYWurmuudJknZW__-Z_mJOPpII0gcPjXzopdu0oeKZ7YcOZrtfhV": "2",  # Craqueleur Légendaire
     "https://static.wikia.nocookie.net/krosmoz/images/0/08/Draegnerys.png/revision/latest?cb=20210422191245&path-prefix=fr": "2",  # Draegnerys
     "https://lh3.googleusercontent.com/_lwfMvZQpJq1Q7YllE2Yg4JpqwdnCj9THoz4D_cbDRC1j_j1Ad9g_4y0SmvHqENmyq-wTvyV1iQfigG6jKeV-89ViaUQP-oNuQmkmw44Tg": "2",  # Wa wobot
     "https://static.wikia.nocookie.net/krosmoz/images/6/62/Mantiscore.png/revision/latest?cb=20210422203436&path-prefix=fr": "2",  # Mantiscore
     "https://static.wikia.nocookie.net/krosmoz/images/7/73/Reine_Ny%C3%A9e.jpg/revision/latest?cb=20210422211822&path-prefix=fr": "2",  # Reine Nyée
-    "https://solomonk.fr/img/monsters/artworks/1458.svg": "2",  # Abraknyde Ancestral
+    "https://lh3.googleusercontent.com/PkaN9b6mdHCGOzZkOn4o4aQTRouTGOuQ5kx-JYtyZwUjFtECYLfe4glzwyC-bErwOpAxaAiqy0PH15oq7N6Qdpv4llM7wf1OuqsonOOGBQ": "2",  # Abraknyde Ancestral
     "https://static.wikia.nocookie.net/dofus-rp/images/9/9b/Chouque.png/revision/latest?cb=20150902084023&path-prefix=fr": "2",  # le Chouque
     "https://jolstatic.fr/dofus/equipe/548763/donjons/MagikRiktus/Choudini.png": "2",  # Choudini
-    "https://dofusretro.org/template/img/core/monsters/1037.svg": "3",  # Dragon Cochon
-    "https://solomonk.fr/img/monsters/artworks/1356.svg": "3",  # Koulosse
-    "https://dofusretro.org/template/img/core/monsters/1134.svg": "3",  # Meulou
+    "https://lh3.googleusercontent.com/hnz40FsMXCSnYLLU-ohNl8wznKgYp6WtP5ic1E4XcPQqSSGWaz5sjZ75vs2e2ml19M_dc7Q59Pid43VWAWwgwJ-4N1XDc70W5uGbnBI": "3",  # Dragon Cochon
+    "https://lh3.googleusercontent.com/NYQE_d9mHOR49mX20HIrUSI4_aDnSSwusgu1CEZ1z9xpLt-GlqGxlSFLMfBP9xvIqBNZfkdUcUnT3jexTZIK1EZuliRfIxpH6u6iU8TX": "3",  # Koulosse
+    "https://methodwakfu.com/wp-content/uploads/2019/11/Milkar_Image-1.png": "3",  # Meulou
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmNWh-RIpkyet6dOTHGCCYmcF82A6NfMqVcA&usqp=CAU": "3",  # Moon
     "https://static.wikia.nocookie.net/dofus-rp/images/e/e6/Dramak.png/revision/latest/scale-to-width-down/216?cb=20150120072036&path-prefix=fr": "3",  # Maitre des Pantins
     "https://jolstatic.fr/dofus/equipe/472077/articles/enutrosor/mallefisk/Monstres/mimikado.jpg": "3",  # Malléfisk
     "https://static.wikia.nocookie.net/krosmoz/images/f/fb/Kharnozor.png/revision/latest?cb=20210422201358&path-prefix=fr": "3",  # Kharnozor
-    "https://solomonk.fr/img/monsters/artworks/1585.svg": "3",  # Silf le Rasboul Majeur
-    "https://solomonk.fr/img/monsters/artworks/1186.svg": "3",  # Maitre Corbac
+    "https://lh3.googleusercontent.com/TZ_P2KyJ-2_bb-bK_T-G0vhG5nqPpe1AyttALW3TaFwtOPvei1lcJtgaiTN9bUrWXZZXyjoZo90UDAQt82HLlLiE1-Gg8gCWnNvba-oT": "3",  # Silf le Rasboul Majeur
+    "https://lh3.googleusercontent.com/MEbuepNxF7zKecL_cFDthGeDjrqzoBiPH5LspipFilIzWjUKWjNZ699GiOt-0fKyWuwdhQ1KNibJza-cX7H0WQa9mhNlMuOafbjRuxLV": "3",  # Maitre Corbac
     "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj21-rat-blanc-sommaire_orig.jpg": "3",  # Rat Blanc
     "https://www.dofuspourlesnoobs.com/uploads/1/3/0/1/13010384/dj22-rat-noir-sommaire_orig.jpg": "3",  # Rat Noir
     "https://lh3.googleusercontent.com/JptzmIPPG3ANJXCfrQXN79ngTDdzUIJcFBQc89h2X_FGdZFAYGQ5EA_N1T4buAxuh1AfVGRY2d9S2az9q_0lZRNy8V-LE5z2d7QZK3k": "3",  # Pounicheur
@@ -197,9 +197,9 @@ donjonsDict = {
     "https://static.wikia.nocookie.net/dofus-rp/images/f/f9/BlopMR.png/revision/latest/scale-to-width-down/274?cb=20230224094657&path-prefix=fr": "3",  # Blop Multicolore Royal
     "https://lh3.googleusercontent.com/4nI6PlsVo7r-N3Us534HJsQzP9GLgJYoycXXQ6liv8imNh7Nu0p_2nwdyFE5EktOFiV3kvCSCPfcA_jP0I6Ur9g2pqw9NHCbb68cmsmmPA": "3",  # Minotoror
     "https://staticns.ankama.com/comm/news/dofus/www/03_2013/carrousel-relance-frigost.jpg": "3",  # Royalmouth
-    "https://solomonk.fr/img/monsters/artworks/1151.svg": "3",  # Tofu Royal
+    "https://lh3.googleusercontent.com/sUrTP3k6q2Q9BkYan-XuT19b_oOlo0sgOe4mK766gi_1wemuxTmt2yuidsv4iyB3zzI2FJIltM_x72Anj9NIxL_OHxpvj2jsfJwGwPK7": "3",  # Tofu Royal
     "https://static.wikia.nocookie.net/dofus-wakfu/images/a/af/126.png/revision/latest?cb=20171126173825&path-prefix=fr": "3",  # Crocabulia
-    "https://solomonk.fr/img/monsters/artworks/1450.svg": "3",  # Skeunk
+    "https://lh3.googleusercontent.com/rrOO2c_Po2S81OpblqubI-r6_kq8eaY-DhOTY-mxn3wGOn5PoYDrbatT7U31llpWw_YxUSSHT4fZO8snq7JagFHREBTMqnxnV7HNh40uvg": "3",  # Skeunk
     "https://lh3.googleusercontent.com/p9hDS68a3pyF216gHIlfGXGEyLWCK52TdH3WlRtBo8jxLXUu_bJrtfDGKI4oChZFZewEEICXojjgOVgJNB6shaE7khbgWCds4oMqUx6vjw": "3",  # Fraktale
     "https://lh3.googleusercontent.com/vD1CrELpHcoaW3hVGKtD5JoIlBhMwHy1xj4f1YMMgCth9cuEHPAUnPxVsavC4hTFA8SxHiH4POdA0uvAMm8p_nGzMI2LdjiORhUnOHc": "3",  # Haute Truche
     "https://static.wikia.nocookie.net/krosmoz/images/c/c2/El_Piko.jpg/revision/latest?cb=20210422191746&path-prefix=fr": "3",  # El Piko
@@ -209,7 +209,7 @@ donjonsDict = {
     "https://static.wikia.nocookie.net/krosmoz/images/1/16/Tanukou%C3%AF_San.png/revision/latest?cb=20210422214342&path-prefix=fr": "3",
     # Tanukoui San
     "https://lh3.googleusercontent.com/rpKYNQ_kny-y0MgEbgyy7pvYeZ7KPPFw_EBw6CnvrbJX5kq-D_7BF2xOOPpdEhDQ8tInRaTHMzD8x7KWuEVGMILeseqKfA3WBVDPKh8": "3",  # Chêne Mou
-    "https://solomonk.fr/img/monsters/artworks/1616.svg": "3",  # Tynril
+    "https://lh3.googleusercontent.com/1wa8YqAfIUwSxlra7GJhjrj5gDt7LzV8Jdr8nThkaln8r-49ZMwd_IEbE2awnazUec0Whi1UgaOaxyTfP8DQpLWhZRMxHtWgj-G0f7FV": "3",  # Tynril
     "https://lh3.googleusercontent.com/BF8ZdcAY88qo76osVtB3rxXtKNjLW_gGlNe61H_ktdysQ6FqVDVsoeZVLoTTiCnYWaguiOmAxSiHuI3O6k5lwQTYKiRb_H59vwJwr_k9": "3",  # Mansot Royal
     "https://pbs.twimg.com/media/EqkmPb_W4AEjN-F?format=jpg&name=large": "3",  # Hanshi et Shihan
     "https://www.dofus.com/fr/mmorpg/encyclopedie/monstres/6249-founoroshi": "3",  # Founoroshi
@@ -218,7 +218,7 @@ donjonsDict = {
     "https://cdna.artstation.com/p/assets/images/images/019/912/544/large/yohan-baes-phossile.jpg?1565554176": "3",  # Phossile
     "https://static.wikia.nocookie.net/dofus-rp/images/5/58/HellMina.png/revision/latest?cb=20220524080032&path-prefix=fr": "3",  # Hell mina
     "https://jolstatic.fr/dofus/equipe/548763/donjons/Kimbo/kimbo.png": "4",  # Kimbo
-    "https://dofusretro.org/template/img/core/monsters/1444.svg": "4",  # Minotot
+    "https://lh3.googleusercontent.com/ea3y5wRdEN1xz1HQcJ6tsA6GYEfCxFRbZAGsQddu3A01WokCICOz3lFu9-WIp627XSmpN3CSYUITlaqWdKtquI3_qVz8k4R2LRRZY40Z4A": "4",  # Minotot
     "https://static1.millenium.org/articles/5/14/25/75/@/44115-dofus-2018-11-23-23-02-14-hackh-article_image_t-2.png": "4",  # Obsidiantre
     "https://static.wikia.nocookie.net/dofus-rp/images/7/74/Kanigroula2.jpg/revision/latest?cb=20230327085619&path-prefix=fr": "4",  # Kanigroula
     "https://static.wikia.nocookie.net/krosmoz/images/f/f4/Ush_Galesh_2.jpg/revision/latest?cb=20210422215414&path-prefix=fr": "4",  # Ush Galesh
@@ -564,6 +564,6 @@ async def on_message(message):  # this event is called when a message is sent by
     await maj_access_cagnotte(lastMsgSend)
 
 # Lance le bot
-token = "MTAOTMwMDUwNzgxNjMwODc5Nw.GxptSF.Mm9FTirlA8lEwx6wq4jQL9I8_ALZ-MvlimALXg"
+token = "MTAxOTMwMDUwNgxNjMwODc5Nw.GxptSF.Mm9FTirlA8lEwx6wq4jQL9I8_ALZ-MvlimALXg"
 # token = os.environ['DISCORD_TOKEN']
 client.run(token)
